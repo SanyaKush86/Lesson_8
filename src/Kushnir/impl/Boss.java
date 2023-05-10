@@ -35,6 +35,7 @@ public class Boss implements Employee {
         for(Manager se:managers) {
             salaryFromManager += se.getSalary();
         }
+        salaryFromManager = (int) (salaryFromManager * PERCENTAGE_FROM_MANAGER_SALARIES);
         return salaryByHours + salaryFromQAs + salaryFromSEs + salaryFromManager;
     }
 
